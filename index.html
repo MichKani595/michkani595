@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Michał Kania – analiza danych i procesów w logistyce</title>
+<meta name="description" content="Portfolio: projekty z analizy danych (Tableau, SQL) i modelowania procesów (BPMN) w logistyce.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f2f4f6;
+    --ink: #14213d;
+    --muted: #4b5870;
+    --line: #c9d0da;
+    --signal: #f2a900;
+    --link: #0b4fb3;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Archivo", "Segoe UI", Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  a { color: var(--link); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* Pasek jak oznaczenie na posadzce magazynu */
+  .floor-mark {
+    height: 14px;
+    background: repeating-linear-gradient(-45deg, var(--signal) 0 18px, var(--ink) 18px 36px);
+  }
+
+  header { padding: 3.5rem 0 2.5rem; }
+  h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 8vw, 4.75rem);
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .role { margin: 1rem 0 0; font-size: 1.25rem; font-weight: 600; }
+  .lead { margin: 1rem 0 0; max-width: 60ch; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin: 1.5rem 0 0; padding: 0; list-style: none; font-weight: 600; }
+
+  section { padding: 2.25rem 0; border-top: 2px solid var(--ink); }
+  h2 { margin: 0 0 1.25rem; font-size: 1.5rem; font-weight: 800; }
+
+  .project {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .project:first-of-type { border-top: 0; padding-top: 0; }
+  .project img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+  .project h3 { margin: 0; font-size: 1.2rem; font-weight: 800; }
+  .meta { margin: .25rem 0 .75rem; color: var(--muted); font-size: .95rem; }
+  .project p { margin: 0 0 .75rem; max-width: 62ch; }
+  .tags { margin: 0 0 .75rem; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; }
+  .tags li { padding: .1rem .6rem; border: 1px solid var(--ink); border-radius: 999px; font-size: .875rem; }
+
+  .skills { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .6rem 2rem; }
+  .skills strong { display: block; }
+  .skills span { color: var(--muted); font-size: .95rem; }
+
+  footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .95rem; border-top: 2px solid var(--ink); }
+
+  @media (max-width: 640px) {
+    .project { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="floor-mark" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap">
+    <h1>Michał Kania</h1>
+    <p class="role">Analiza danych i procesów w logistyce</p>
+    <p class="lead">Magister logistyki z wykształceniem informatycznym. Pracuję w SQL, Excelu (VBA) i Tableau, a procesy opisuję w BPMN. Szukam pierwszej pracy jako analityk danych, analityk biznesowy lub konsultant ERP.</p>
+    <ul class="links">
+      <li><a href="mailto:mkania595@gmail.com">mkania595@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/michkania">LinkedIn</a></li>
+      <li><a href="https://github.com/MichKani595">GitHub</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section id="projekty">
+    <div class="wrap">
+      <h2>Projekty</h2>
+
+      <!-- PROJEKT 1: wgraj zrzut ekranu do folderu images/ pod nazwą tableau-przestepczosc.png -->
+      <article class="project">
+        <img src="images/tableau-przestepczosc.png" alt="Dashboard w Tableau pokazujący populację i wskaźnik przestępczości w stanach USA">
+        <div>
+          <h3>Przestępczość w USA: dashboard w Tableau</h3>
+          <p class="meta">Projekt akademicki, Uniwersytet Marii Curie-Skłodowskiej w Lublinie</p>
+          <p>Interaktywne dashboardy pokazujące populację i wskaźnik przestępczości na 100 000 mieszkańców w stanach, strukturę przestępstw według rodzaju oraz prognozę liczby przestępstw na kolejne lata. [Dodaj 1-2 zdania o wnioskach, np. które stany odstają od reszty i dlaczego.]</p>
+          <ul class="tags"><li>Tableau</li><li>Wizualizacja danych</li><li>Prognozowanie</li></ul>
+          <a href="https://public.tableau.com/views/ProjektBI_17507139447820/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link">Zobacz dashboard na Tableau Public</a>
+        </div>
+      </article>
+
+      <!-- PROJEKT 2: wgraj eksport diagramu jako images/bpmn-pakowanie.png -->
+      <article class="project">
+        <img src="images/bpmn-pakowanie.png" alt="Diagram BPMN procesu kompletowania i pakowania zamówienia">
+        <div>
+          <h3>Proces pakowania zamówienia: model BPMN</h3>
+          <p class="meta">Projekt akademicki, Uniwersytet Marii Curie-Skłodowskiej w Lublinie</p>
+          <p>Model procesu od skompletowania zamówienia do gotowej paczki, z kontrolą zgodności, pętlą dokompletowania przy braku towaru i osobnym zakończeniem dla zamówienia niezrealizowanego. [Dodaj, jakie wąskie gardło widzisz i jak byś je usprawnił.]</p>
+          <ul class="tags"><li>BPMN</li><li>Modelowanie procesów</li><li>Logistyka magazynowa</li></ul>
+          <a href="https://github.com/MichKani595">Zobacz plik i opis na GitHubie</a>
+        </div>
+      </article>
+
+      <!-- Kolejny projekt: skopiuj cały blok <article class="project"> ... </article> i podmień teksty -->
+    </div>
+  </section>
+
+  <section id="umiejetnosci">
+    <div class="wrap">
+      <h2>Umiejętności</h2>
+      <ul class="skills">
+        <li><strong>Dane</strong><span>SQL (MySQL), Excel i VBA, Tableau</span></li>
+        <li><strong>Procesy</strong><span>BPMN, lean management, symulacje procesów</span></li>
+        <li><strong>Systemy</strong><span>Podstawy SAP, administracja systemami komputerowymi</span></li>
+        <li><strong>Języki</strong><span>polski (ojczysty), angielski (B2)</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Projekty oznaczone jako akademickie powstały w ramach zajęć na studiach.
+  </div>
+</footer>
+</body>
+</html>
