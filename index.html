@@ -31,12 +31,6 @@
   a:focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; }
   .wrap { max-width: 860px; margin: 0 auto; padding: 0 1.25rem; }
 
-  /* Pasek jak oznaczenie na posadzce magazynu */
-  .floor-mark {
-    height: 14px;
-    background: repeating-linear-gradient(-45deg, var(--signal) 0 18px, var(--ink) 18px 36px);
-  }
-
   header { padding: 3.5rem 0 2.5rem; }
   h1 {
     margin: 0;
@@ -70,6 +64,7 @@
   .meta { margin: .25rem 0 .75rem; color: var(--muted); font-size: .95rem; }
   .project p { margin: 0 0 .75rem; max-width: 62ch; }
   .tags { margin: 0 0 .75rem; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; }
+  .thumbs { font-size: .95rem; }
   .tags li { padding: .1rem .6rem; border: 1px solid var(--ink); border-radius: 999px; font-size: .875rem; }
 
   .skills { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .6rem 2rem; }
@@ -104,31 +99,34 @@
     <div class="wrap">
       <h2>Projekty</h2>
 
-      <!-- PROJEKT 1: wgraj zrzut ekranu do folderu images/ pod nazwą tableau-przestepczosc.png -->
+      <!-- Wgraj zrzut ekranu jako images/tableau-przestepczosc.png i wstaw link do Tableau Public -->
       <article class="project">
-        <img src="images/tableau-przestepczosc.png" alt="Dashboard w Tableau pokazujący populację i wskaźnik przestępczości w stanach USA">
+        <a href="images/tableau-przestepczosc.png" target="_blank" rel="noopener"><img src="images/tableau-przestepczosc.png" alt="Dashboard w Tableau: populacja i wskaźnik przestępczości w stanach USA"></a>
         <div>
-          <h3>Przestępczość w USA: dashboard w Tableau</h3>
-          <p class="meta">Projekt akademicki, Uniwersytet Marii Curie-Skłodowskiej w Lublinie</p>
-          <p>Interaktywne dashboardy pokazujące populację i wskaźnik przestępczości na 100 000 mieszkańców w stanach, strukturę przestępstw według rodzaju oraz prognozę liczby przestępstw na kolejne lata. [Dodaj 1-2 zdania o wnioskach, np. które stany odstają od reszty i dlaczego.]</p>
-          <ul class="tags"><li>Tableau</li><li>Wizualizacja danych</li><li>Prognozowanie</li></ul>
-          <a href="https://public.tableau.com/views/ProjektBI_17507139447820/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link">Zobacz dashboard na Tableau Public</a>
+          <h3>Przestępczość w USA 2014-2023: dashboardy w Tableau</h3>
+          <p class="meta">Projekt akademicki</p>
+          <p>Cztery dashboardy i story: rozkład przestępczości w stanach (populacja, wskaźnik na 100 tys. mieszkańców, rodzaje przestępstw), prognoza i stany odstające, zmiana przestępczości w latach 2014-2023 oraz zestawienie z bezrobociem.</p>
+          <p>Podczas weryfikacji znalazłem błąd w danych: łączna liczba przestępstw zawierała kategorie zbiorcze (przemoc i przestępstwa przeciwko mieniu) razem z ich składnikami, więc była zawyżona mniej więcej dwukrotnie (np. 18,4 mln zamiast ok. 9,2 mln dla 2016). Poprawiłem formułę. W danych o bezrobociu skorygowałem rok o -1 po porównaniu z danymi BLS (skok bezrobocia w 2020). Zależności między bezrobociem a przestępczością nie interpretuję jako przyczynowych.</p>
+          <ul class="tags"><li>Tableau</li><li>Pola obliczeniowe</li><li>Weryfikacja danych</li><li>Prognozowanie</li></ul>
+          <a href="https://public.tableau.com/shared/NMC8WXN89?:display_count=n&:origin=viz_share_link">Zobacz na Tableau Public</a>
         </div>
       </article>
 
-      <!-- PROJEKT 2: wgraj eksport diagramu jako images/bpmn-pakowanie.png -->
       <article class="project">
-        <img src="images/bpmn-pakowanie.png" alt="Diagram BPMN procesu kompletowania i pakowania zamówienia">
+        <a href="images/bpmn-przygotowanie-zamowienia.png" target="_blank" rel="noopener"><img src="images/bpmn-przygotowanie-zamowienia.png" alt="Diagram BPMN: przygotowanie zamówienia do wysyłki, cztery tory"></a>
         <div>
-          <h3>Proces pakowania zamówienia: model BPMN</h3>
-          <p class="meta">Projekt akademicki, Uniwersytet Marii Curie-Skłodowskiej w Lublinie</p>
-          <p>Model procesu od skompletowania zamówienia do gotowej paczki, z kontrolą zgodności, pętlą dokompletowania przy braku towaru i osobnym zakończeniem dla zamówienia niezrealizowanego. [Dodaj, jakie wąskie gardło widzisz i jak byś je usprawnił.]</p>
-          <ul class="tags"><li>BPMN</li><li>Modelowanie procesów</li><li>Logistyka magazynowa</li></ul>
-          <a href="https://github.com/MichKani595">Zobacz plik i opis na GitHubie</a>
+          <h3>Modelowanie procesów logistycznych w BPMN</h3>
+          <p class="meta">Projekt grupowy (zajęcia na studiach). Mój udział: [uzupełnij, np. które diagramy i elementy modelowałem]</p>
+          <p>Trzy procesy: przygotowanie zamówienia do wysyłki (tory: system, obsługa klienta, magazyn, dział wysyłki, z bramką równoległą dla pakowania i etykiet), zwrot towaru oraz reklamacja dostawy (komunikacja między uczestnikami przez message flow, zdarzenia wiadomości, zadania wysyłania i odbierania). Kliknij obraz, żeby zobaczyć pełny diagram.</p>
+          <p class="thumbs">
+            <a href="images/bpmn-zwrot-towaru.png" target="_blank" rel="noopener">Zwrot towaru</a> ·
+            <a href="images/bpmn-reklamacja-dostawy-v2.png" target="_blank" rel="noopener">Reklamacja dostawy</a> ·
+            <a href="images/bpmn-przygotowanie-zamowienia.png" target="_blank" rel="noopener">Przygotowanie zamówienia</a> ·
+            <a href="images/bpmn-przygotowanie-zamowienia-rozszerzone.png" target="_blank" rel="noopener">Przygotowanie zamówienia (wersja rozszerzona)</a> ·
+          </p>
+          <ul class="tags"><li>BPMN 2.0</li><li>Baseny i tory</li><li>Message flow</li><li>Logistyka magazynowa</li></ul>
         </div>
       </article>
-
-      <!-- Kolejny projekt: skopiuj cały blok <article class="project"> ... </article> i podmień teksty -->
     </div>
   </section>
 
@@ -136,9 +134,9 @@
     <div class="wrap">
       <h2>Umiejętności</h2>
       <ul class="skills">
-        <li><strong>Dane</strong><span>SQL (MySQL), Excel i VBA, Tableau</span></li>
+        <li><strong>Dane</strong><span>SQL (MySQL), Excel i VBA, Tableau, FlexSim</span></li>
         <li><strong>Procesy</strong><span>BPMN, lean management, symulacje procesów</span></li>
-        <li><strong>Systemy</strong><span>Podstawy SAP, administracja systemami komputerowymi</span></li>
+        <li><strong>Systemy</strong><span>Podstawy SAP Business One, administracja systemami komputerowymi</span></li>
         <li><strong>Języki</strong><span>polski (ojczysty), angielski (B2)</span></li>
       </ul>
     </div>
@@ -147,7 +145,7 @@
 
 <footer>
   <div class="wrap">
-    Projekty oznaczone jako akademickie powstały w ramach zajęć na studiach.
+    Projekty powstały w ramach zajęć na studiach.
   </div>
 </footer>
 </body>
